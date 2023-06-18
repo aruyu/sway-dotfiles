@@ -1,0 +1,25 @@
+## environment
+#
+# set desktop environment unique variables
+exec avizo-service
+exec nm-applet --indicator
+exec blueman-applet
+exec copyq --start-server
+exec ibus-daemon --xim -d -r
+exec swayidle -w timeout 600 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+exec swayidle -w timeout 3600 'systemctl suspend'
+
+# set window settings
+exec_always autotiling
+exec_always ~/.config/sway/scripts/window-transparency.sh
+
+# start sway xdg
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
+
+# start sway systemd target
+exec_always "systemctl --user start sway-session.target"
+
+# cursor theme
+seat seat0 xcursor_theme "Catppuccin-Frappe-Dark-Cursors"
+exec_always gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Frappe-Dark-Cursors

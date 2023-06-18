@@ -1,0 +1,159 @@
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Alt
+set $mod2 Mod4
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Your preferred apps 
+set $term foot
+set $blowser firefox
+set $files nautilus --new-window
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu killall wofi || wofi --show run -IG
+
+
+### Key bindings
+#
+# Start a terminal
+bindsym $mod+w exec $term
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Start your launcher
+bindsym Ctrl+space exec $menu
+
+# Start a internet blowser
+bindsym $mod+e exec $blowser
+bindsym $mod+f exec $files
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+
+#
+# Moving around:
+#
+# Move your focus around
+# Or use $mod+[up|down|left|right]
+bindsym $mod+Shift+Left focus left
+bindsym $mod+Shift+Down focus down
+bindsym $mod+Shift+Up focus up
+bindsym $mod+Shift+Right focus right
+
+# Move the focused window with the same, but add Shift
+# Ditto, with arrow keys
+bindsym $mod+Left move left, move left
+bindsym $mod+Down move down
+bindsym $mod+Up move up
+bindsym $mod+Right move right, move right
+
+
+#
+# Resizing containers:
+#
+bindsym $mod+Ctrl+Left resize shrink width 20px
+bindsym $mod+Ctrl+Down resize grow height 20px
+bindsym $mod+Ctrl+Up resize shrink height 20px
+bindsym $mod+Ctrl+Right resize grow width 20px
+
+
+#
+# Workspaces:
+#
+# Switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1, workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2, workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3, workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4, workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5, workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6, workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7, workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8, workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9, workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10, workspace number 10
+# Note: workspaces can have any name you want, not just numbers.
+# We just use 1-10 as the default.
+
+
+#
+# Layout stuff:
+#
+# You can "split" the current object of your focus
+# respectively.
+bindsym $mod+k splith
+bindsym $mod+l splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+a layout stacking
+bindsym $mod+s layout tabbed
+bindsym $mod+d layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+Return fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus between the tiling area and the floating area
+#bindsym $mod+space focus mode_toggle
+
+# Move focus to the parent container
+#bindsym $mod+a focus parent
+
+
+#
+# Scratchpad:
+#
+# Sway has a "scratchpad", which is a bag of holding for windows.
+# You can send windows there and get them back later.
+
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+
+# Volume
+bindsym XF86AudioRaiseVolume exec volumectl -u up
+bindsym XF86AudioLowerVolume exec volumectl -u down
+bindsym XF86AudioMute exec volumectl toggle-mute
+bindsym XF86AudioMicMute exec volumectl -m toggle-mute
+
+# Brightness
+bindsym XF86MonBrightnessUp exec lightctl up
+bindsym XF86MonBrightnessDown exec lightctl down
+bindsym $mod+BracketRight exec lightctl up
+bindsym $mod+BracketLeft exec lightctl down

@@ -1,0 +1,41 @@
+image {
+  color: #eceff4;
+}
+
+button {
+  background: none;
+  border-style: none;
+  box-shadow: none;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 16px;
+  outline: none;
+  color: #eceff4;
+}
+
+button:focus {
+  color: #2e3440;
+  background-color: #81a1c1;
+}
+
+#searchbox {
+  background-color: #3f424e;
+  border: none;
+  border-radius: 20px;
+  color: #eceff4;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+#separator {
+  background-color: transparent;
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#description {
+  margin-bottom: 20px;
+  color: #eceff4;
+}

@@ -1,0 +1,168 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+include /etc/sway/config.d/*
+include ~/.config/sway/*.swayconf
+
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg ~/Desktop/Backgrounds/wallpaper.jpg fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+
+### Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+#
+input "1133:45108:Logitech_MX_Master_3S" {
+  natural_scroll enabled
+}
+
+input "1118:2479:Microsoft_Surface_045E:09AF_Touchpad" {
+  dwt enabled
+  tap enabled
+  natural_scroll enabled
+  middle_emulation enabled
+}
+
+
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+
+# set inner and outer gaps
+gaps outer 1
+gaps inner 5
+default_border pixel 3
+
+
+### Window rules configuration
+#
+#for_window [class=".*"] split toggle
+#for_window [class=".*"] opacity 0.9
+
+for_window [app_id="nm-connection-editor"] {
+  floating enable
+}
+
+for_window [app_id="pavucontrol"] {
+  floating enable
+}
+
+for_window [app_id="blueman-manager"] {
+  floating enable
+}
+
+for_window [app_id="ibus-setup"] {
+  floating enable
+}
+
+for_window [app_id="ibus-setup-hangul"] {
+  floating enable
+}
+
+
+for_window [app_id="org.gnome.Nautilus"] {
+  floating enable
+}
+
+for_window [app_id="file-roller"] {
+  floating enable
+}
+
+for_window [app_id="Viewnior"] {
+  floating enable
+}
+
+for_window [app_id="nwg-look"] {
+  floating enable
+}
+
+for_window [app_id="remmina"] {
+  floating enable
+}
+
+for_window [app_id="qalculate-gtk"] {
+  floating enable
+}
+
+
+for_window [title="Home"] {
+  floating enable
+}
+
+for_window [title="Library"] {
+  floating enable
+}
+
+for_window [title="Open File"] {
+  floating enable
+}
+
+for_window [title="Open Folder"] {
+  floating enable
+}
+
+for_window [title="Save As"] {
+  floating enable
+}
+
+
+for_window [app_id="gsimplecal"] {
+  floating enable
+  sticky enable
+  border none
+  move up 365 px
+  move right 595 px
+}
+
+for_window [class="floating"] {
+  floating enable
+  sticky enable
+  border none
+}
+
+
+#
+# Status Bar:
+#
+# define status bar
+bar {
+  swaybar_command waybar
+}
+
+set $bg             #a48abfcc
+set $bg-inactive    #120e1200
+set $bg-urgent      #d9236588
+set $text-light     #f2d8e988
+set $text-dark      #0b0b0b88
+set $text-inactive  #59485088
+
+# set color theme
+# class                 border        bground       text        indicator     child_border
+client.focused          $bg           $bg           $text-dark  $bg           $bg
+client.focused_inactive $bg-inactive  $bg-inactive  $text-light $bg-inactive  $bg-inactive
+client.unfocused        $bg-inactive  $bg-inactive  $text-light $bg-inactive  $bg-inactive
+client.urgent           $bg-urgent    $bg-urgent    $text-light $bg-urgent    $bg-urgent
+client.placeholder      $bg-inactive  $bg-inactive  $text-light $bg-inactive  $bg-inactive

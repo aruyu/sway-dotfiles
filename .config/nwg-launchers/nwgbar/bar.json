@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Lock screen",
+    "exec": "swaylock -f -c 000000",
+    "icon": "system-lock-screen"
+  },
+  {
+    "name": "Logout",
+    "exec": "/home/aru/.config/nwg-launchers/nwgbar/scripts/logout.py",
+    "icon": "system-log-out"
+  },
+  {
+    "name": "Reboot",
+    "exec": "/home/aru/.config/nwg-launchers/nwgbar/scripts/reboot.py",
+    "icon": "system-reboot"
+  },
+  {
+    "name": "Shutdown",
+    "exec": "/home/aru/.config/nwg-launchers/nwgbar/scripts/shutdown.py",
+    "icon": "system-shutdown"
+  }
+]
