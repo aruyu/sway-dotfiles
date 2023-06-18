@@ -39,6 +39,10 @@ input "1133:45108:Logitech_MX_Master_3S" {
   natural_scroll enabled
 }
 
+input "1133:45108:MX_Master_3S" {
+  natural_scroll enabled
+}
+
 input "1118:2479:Microsoft_Surface_045E:09AF_Touchpad" {
   dwt enabled
   tap enabled
