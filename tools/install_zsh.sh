@@ -81,7 +81,7 @@ EOF
 
   zsh
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  curl -o $HOME/.config/zsh/.zshrc https://raw.githubusercontent.com/aruyu/hyprland-dotfiles/master/.zshrc
+  curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/hyprland-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
@@ -96,7 +96,7 @@ EOF
 
   zsh
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  curl -o $HOME/.config/zsh/.zshrc https://raw.githubusercontent.com/aruyu/hyprland-dotfiles/master/.zshrc
+  curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/hyprland-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $MAC ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
@@ -110,7 +110,7 @@ EOF
 
   zsh
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  curl -o $HOME/.config/zsh/.zshrc https://raw.githubusercontent.com/aruyu/hyprland-dotfiles/master/.zshrc
+  curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/hyprland-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $FONT ]; then
   echo -ne "Selected Job: $CURRENT_JOB\n"

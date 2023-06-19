@@ -4,6 +4,6 @@ if [ $$ != `pgrep -fo $0` ]; then
   exit 9
 fi
 
-python3 ~/.config/sway/window-transparency.py
+python3 ~/.config/sway/scripts/window-transparency.py
 
 exit 0
