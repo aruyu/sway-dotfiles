@@ -27,14 +27,14 @@ tooltip {
 }
 
 #workspaces button.active {
-  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(245,194,231,1) 43%, rgba(202,158,230,1) 100%); 
+  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(245,194,231,0.8) 64%, rgba(202,158,230,0.8) 100%);
   background-size: 300% 300%;
   color: rgba(21, 18, 27, .6);
   border-radius: 10px;
 }
 
 #workspaces button.focused {
-  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(245,194,231,1) 43%, rgba(202,158,230,1) 100%); 
+  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(245,194,231,0.8) 64%, rgba(202,158,230,0.8) 100%);
   background-size: 300% 300%;
   color: rgba(21, 18, 27, .6);
   border-radius: 10px;
@@ -76,7 +76,7 @@ tooltip {
 }
 
 #custom-launcher {
-  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(222,128,130,1) 43%, rgba(245,194,231,1) 80%, rgba(180,190,254,1) 100%); 
+  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(222,128,130,1) 43%, rgba(245,194,231,1) 80%, rgba(180,190,254,1) 100%);
   background-size: 300% 300%;
   border-radius: 10px;
   border-right: 0px;
@@ -118,7 +118,7 @@ tooltip {
 
 #window {
   background: rgb(245,194,231);
-  background: linear-gradient(45deg, rgba(245,194,231,1) 0%, rgba(203,166,247,1) 0%, rgba(243,139,168,1) 13%, rgba(235,160,172,1) 26%, rgba(250,179,135,1) 34%, rgba(249,226,175,1) 49%, rgba(166,227,161,1) 65%, rgba(148,226,213,1) 77%, rgba(137,220,235,1) 82%, rgba(116,199,236,1) 88%, rgba(137,180,250,1) 95%); 
+  background: linear-gradient(45deg, rgba(245,194,231,1) 0%, rgba(203,166,247,1) 0%, rgba(243,139,168,1) 13%, rgba(235,160,172,1) 26%, rgba(250,179,135,1) 34%, rgba(249,226,175,1) 49%, rgba(166,227,161,1) 65%, rgba(148,226,213,1) 77%, rgba(137,220,235,1) 82%, rgba(116,199,236,1) 88%, rgba(137,180,250,1) 95%);
   color: #fff;
   background-size: 500% 500%;
   color: rgba(21, 18, 27, .6);
@@ -135,7 +135,7 @@ tooltip {
 
 #temperature.critical {
   background: rgb(243,139,168);
-  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(255,16,16,.6) 100%); 
+  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(255,16,16,.6) 100%);
   color: #fff;
 }
 
@@ -161,7 +161,7 @@ tooltip {
 
 #pulseaudio.muted {
   background: rgb(243,139,168);
-  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%); 
+  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%);
   color: rgba(21, 18, 27, .6);
 }
 
@@ -174,7 +174,7 @@ tooltip {
 
 #pulseaudio.microphone.muted {
   background: rgb(243,139,168);
-  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%); 
+  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%);
   color: rgba(21, 18, 27, .6);
 }
 
@@ -193,27 +193,27 @@ tooltip {
 
 #battery.plugged {
   background: rgb(137,180,250);
-  background: linear-gradient(45deg, rgba(137,180,250,1) 0%, rgba(245,194,231,1) 64%, rgba(202,158,230,1) 100%); 
+  background: linear-gradient(45deg, rgba(137,180,250,1) 0%, rgba(245,194,231,0.8) 64%, rgba(202,158,230,0.8) 100%);
   background-size: 300% 300%;
   color: rgba(21, 18, 27, .6);
 }
 
 #battery.charging {
-  background: rgba(18, 200, 71, .6);
-  background: linear-gradient(45deg, rgba(18, 200, 71, .6) 0%, rgba(245,194,231,1) 64%, rgba(202,158,230,1) 100%); 
+  background: rgb(18,200,71);
+  background: linear-gradient(45deg, rgba(18, 200, 71,1) 0%, rgba(245,194,231,0.8) 64%, rgba(202,158,230,0.8) 100%);
   background-size: 300% 300%;
   color: rgba(21, 18, 27, .6);
 }
 
 #battery.warning:not(.charging) {
   background: rgb(243,139,168);
-  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(213,142,29,.6) 100%); 
+  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(213,142,29,.6) 100%);
   color: #fff;
 }
 
 #battery.critical:not(.charging) {
   background: rgb(243,139,168);
-  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(255,16,16,.6) 100%); 
+  background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(255,16,16,.6) 100%);
   color: #fff;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -224,7 +224,7 @@ tooltip {
 
 #clock {
   background: rgb(148,226,213);
-  background: linear-gradient(52deg, rgba(148,226,213,1) 0%, rgba(137,220,235,1) 19%, rgba(116,199,236,1) 43%, rgba(137,180,250,1) 56%, rgba(180,190,254,1) 80%, rgba(186,187,241,1) 100%); 
+  background: linear-gradient(52deg, rgba(148,226,213,1) 0%, rgba(137,220,235,1) 19%, rgba(116,199,236,1) 43%, rgba(137,180,250,1) 56%, rgba(180,190,254,1) 80%, rgba(186,187,241,1) 100%);
   background-size: 300% 300%;
   color: rgba(21, 18, 27, .6);
   border-radius: 10px;
@@ -233,7 +233,7 @@ tooltip {
 }
 
 #custom-powermenu {
-  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(222,128,130,1) 43%, rgba(245,194,231,1) 80%, rgba(180,190,254,1) 100%); 
+  background: linear-gradient(45deg, rgba(191, 97, 106, 1) 0%, rgba(222,128,130,1) 43%, rgba(245,194,231,1) 80%, rgba(180,190,254,1) 100%);
   background-size: 300% 300%;
   border-radius: 10px;
   border-left: 0px;
