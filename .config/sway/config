@@ -132,6 +132,18 @@ for_window [title="Save As"] {
   floating enable
 }
 
+for_window [title="Logout"] {
+  floating enable
+}
+
+for_window [title="Reboot"] {
+  floating enable
+}
+
+for_window [title="Shutdown"] {
+  floating enable
+}
+
 
 for_window [app_id="gsimplecal"] {
   floating enable

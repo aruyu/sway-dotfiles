@@ -62,19 +62,19 @@ bindsym $mod+Shift+Right focus right
 
 # Move the focused window with the same, but add Shift
 # Ditto, with arrow keys
-bindsym $mod+Left move left, move left
+bindsym $mod+Left move left
 bindsym $mod+Down move down
 bindsym $mod+Up move up
-bindsym $mod+Right move right, move right
+bindsym $mod+Right move right
 
 
 #
 # Resizing containers:
 #
-bindsym $mod+Ctrl+Left resize shrink width 20px
-bindsym $mod+Ctrl+Down resize grow height 20px
-bindsym $mod+Ctrl+Up resize shrink height 20px
-bindsym $mod+Ctrl+Right resize grow width 20px
+bindsym $mod+Ctrl+Left resize shrink width 25px
+bindsym $mod+Ctrl+Down resize grow height 25px
+bindsym $mod+Ctrl+Up resize shrink height 25px
+bindsym $mod+Ctrl+Right resize grow width 25px
 
 
 #
