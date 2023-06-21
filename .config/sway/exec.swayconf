@@ -5,7 +5,8 @@ exec avizo-service
 exec nm-applet --indicator
 exec blueman-applet
 exec copyq --start-server
-exec ibus-daemon --xim -d -r
+#input * xkb_options korean:ralt_hangul,korean:rctrl_hanja
+exec kime
 exec swayidle -w timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 exec swayidle -w timeout 3600 'systemctl suspend'
 

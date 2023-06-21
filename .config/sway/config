@@ -144,6 +144,12 @@ for_window [title="Shutdown"] {
   floating enable
 }
 
+for_window [title="kime-candidate"] {
+  floating enable
+  sticky enable
+  border none
+}
+
 
 for_window [app_id="gsimplecal"] {
   floating enable
