@@ -1,6 +1,6 @@
 {
     // General config
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "mod": "dock",
     "exclusive": true,
@@ -31,7 +31,7 @@
 
     // Module config
     "custom/launcher": {
-        "on-click": "nwggrid -o 0.6",
+        "on-click": "nwggrid -o 0.75 -layer-shell-exclusive-zone 1",
         "format": "異",
         "tooltip": false,
         "min-length": 2
@@ -167,7 +167,7 @@
     },
 
     "custom/powermenu": {
-        "on-click": "nwgbar -o 0.6",
+        "on-click": "nwgbar -o 0.75 -layer-shell-exclusive-zone 1",
         "format": "⏻",
         "tooltip": false,
         "min-length": 2
