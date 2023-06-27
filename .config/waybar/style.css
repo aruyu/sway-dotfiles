@@ -64,8 +64,8 @@ tooltip {
 #battery,
 #clock,
 #custom-powermenu {
-  box-shadow: rgba(0, 0, 0, 0.288) 2 1 2 0px;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  box-shadow: rgba(0, 0, 0, 0.288) 2px 1px 2px 0px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
   background: rgba(21, 18, 27, .6);
   animation: gradient 10s ease infinite;
   color: #fff;

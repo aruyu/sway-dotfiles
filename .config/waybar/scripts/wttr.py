@@ -58,9 +58,10 @@ WEATHER_CODES = {
 data = {}
 
 try:
-  weather = requests.get("https://wttr.in/?format=j1").json()
+    requested = requests.get("https://wttr.in/?format=j1")
+    weather = json.loads(requested.text)
 except:
-  weather = "No Info"
+    weather = "No Info"
 
 
 def format_time(time):
