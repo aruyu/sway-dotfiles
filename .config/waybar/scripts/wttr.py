@@ -55,13 +55,15 @@ WEATHER_CODES = {
   '395': '❄️'
 }
 
-data = {}
 
 try:
-  requested = requests.get("https://wttr.in/?format=j1")
-  weather = json.loads(requested.text)
+  weather = requests.get("https://wttr.in/Seoul?format=j1").json()
 except:
-  weather = "No Info"
+  try:
+    requested = requests.get("https://wttr.in/Seoul?format=j1").text
+    weather = json.loads(requested)
+  except:
+    weather = "No Info"
 
 
 def format_time(time):
@@ -91,6 +93,7 @@ def format_chances(hour):
   return ", ".join(conditions)
 
 try:
+  data = {}
   data['text'] = WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
     " " + weather['current_condition'][0]['temp_C']+ "°"
 
@@ -116,4 +119,4 @@ try:
   print(json.dumps(data))
 
 except:
-  pass
+  print('{ "X": "X" }')
