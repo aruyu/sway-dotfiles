@@ -98,10 +98,6 @@ for_window [app_id="remmina"] {
   floating enable
 }
 
-for_window [app_id="qalculate-gtk"] {
-  floating enable
-}
-
 
 for_window [title="Home"] {
   floating enable
@@ -143,6 +139,12 @@ for_window [title="kime-candidate"] {
 
 for_window [title="Viewnior"] {
   floating enable
+}
+
+for_window [title="Uno Calculator"] {
+  floating enable
+  resize set width 600 px
+  resize set height 500 px
 }
 
 
