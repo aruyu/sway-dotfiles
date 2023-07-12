@@ -176,12 +176,12 @@ set $bg-inactive    #120e1200
 set $bg-urgent      #d9236588
 set $text-light     #f2d8e988
 set $text-dark      #0b0b0b88
-set $text-inactive  #59485088
+set $text-inactive  #59485000
 
 # set color theme
-# class                 border        bground       text        indicator     child_border
-client.focused          $bg           $bg           $text-dark  $bg           $bg
-client.focused_inactive $bg-inactive  $bg-inactive  $text-light $bg-inactive  $bg-inactive
-client.unfocused        $bg-inactive  $bg-inactive  $text-light $bg-inactive  $bg-inactive
-client.urgent           $bg-urgent    $bg-urgent    $text-light $bg-urgent    $bg-urgent
-client.placeholder      $bg-inactive  $bg-inactive  $text-light $bg-inactive  $bg-inactive
+# class                 border        bground       text            indicator     child_border
+client.focused          $bg           $bg           $text-dark      $bg           $bg
+client.focused_inactive $bg-inactive  $bg-inactive  $text-inactive  $bg-inactive  $bg-inactive
+client.unfocused        $bg-inactive  $bg-inactive  $text-inactive  $bg-inactive  $bg-inactive
+client.urgent           $bg-urgent    $bg-urgent    $text-light     $bg-urgent    $bg-urgent
+client.placeholder      $bg-inactive  $bg-inactive  $text-inactive  $bg-inactive  $bg-inactive
