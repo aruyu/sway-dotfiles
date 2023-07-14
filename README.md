@@ -1,5 +1,9 @@
 # Sway Dotfiles
 
+![Jul14_095858](https://github.com/aruyu/sway-dotfiles/assets/75081360/28299a56-33d0-48f3-9395-df27bb161dcf)
+
+![Jul14_100102](https://github.com/aruyu/sway-dotfiles/assets/75081360/fdc14515-5b6d-4e23-bfd9-9f67e443acac)
+
 Custom dotfiles for Sway WM for wayland with ZSH.
 
 ## Installation
