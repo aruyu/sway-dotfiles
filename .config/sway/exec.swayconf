@@ -5,7 +5,7 @@ exec avizo-service
 exec nm-applet --indicator
 exec blueman-applet
 exec copyq --start-server
-#input * xkb_options korean:ralt_hangul,korean:rctrl_hanja
+input * xkb_options korean:ralt_hangul,korean:rctrl_hanja
 exec kime
 exec swayidle -w timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 exec swayidle -w timeout 3600 'systemctl suspend'
@@ -19,7 +19,7 @@ exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 
 # start sway systemd target
-exec_always "systemctl --user start sway-session.target"
+exec_always systemctl --user start sway-session.target
 
 # cursor theme
 seat seat0 xcursor_theme "Catppuccin-Frappe-Dark-Cursors"
