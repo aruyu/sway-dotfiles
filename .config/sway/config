@@ -137,14 +137,27 @@ for_window [title="kime-candidate"] {
   border none
 }
 
-for_window [title="Viewnior"] {
-  floating enable
-}
-
 for_window [title="Uno Calculator"] {
   floating enable
   resize set width 600 px
   resize set height 500 px
+}
+
+
+for_window [title=".png"] {
+  floating enable
+}
+
+for_window [title=".jpg"] {
+  floating enable
+}
+
+for_window [title=".jpeg"] {
+  floating enable
+}
+
+for_window [title=".gif"] {
+  floating enable
 }
 
 
