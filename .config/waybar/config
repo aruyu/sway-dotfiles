@@ -160,7 +160,7 @@
     },
 
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
         //"format": "{: %R   %d/%m}",
         "format": "{:%d %b, %H:%M}",
         "on-click": "gsimplecal"
