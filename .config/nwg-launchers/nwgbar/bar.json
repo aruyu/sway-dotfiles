@@ -1,8 +1,8 @@
 [
   {
-    "name": "Lock screen",
-    "exec": "swaylock -f -c 000000",
-    "icon": "system-lock-screen"
+    "name": "Suspend",
+    "exec": "systemctl suspend",
+    "icon": "system-suspend"
   },
   {
     "name": "Logout",
