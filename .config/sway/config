@@ -66,6 +66,18 @@ default_border pixel 3
 #for_window [class=".*"] split toggle
 #for_window [class=".*"] opacity 0.9
 
+for_window [app_id="org.gnome.Nautilus"] {
+  floating enable
+}
+
+for_window [app_id="file-roller"] {
+  floating enable
+}
+
+for_window [app_id="nwg-look"] {
+  floating enable
+}
+
 for_window [app_id="nm-connection-editor"] {
   floating enable
 }
@@ -78,24 +90,20 @@ for_window [app_id="blueman-manager"] {
   floating enable
 }
 
-for_window [app_id="org.gnome.Nautilus"] {
-  floating enable
-}
-
-for_window [app_id="file-roller"] {
-  floating enable
-}
-
-for_window [app_id="Viewnior"] {
-  floating enable
-}
-
-for_window [app_id="nwg-look"] {
+for_window [app_id="copyq"] {
   floating enable
 }
 
 for_window [app_id="remmina"] {
   floating enable
+}
+
+for_window [app_id="gsimplecal"] {
+  floating enable
+  sticky enable
+  border none
+  move up 365 px
+  move right 595 px
 }
 
 
@@ -144,29 +152,10 @@ for_window [title="Uno Calculator"] {
 }
 
 
-for_window [title=".png"] {
+for_window [class="Viewnior"] {
   floating enable
-}
-
-for_window [title=".jpg"] {
-  floating enable
-}
-
-for_window [title=".jpeg"] {
-  floating enable
-}
-
-for_window [title=".gif"] {
-  floating enable
-}
-
-
-for_window [app_id="gsimplecal"] {
-  floating enable
-  sticky enable
-  border none
-  move up 365 px
-  move right 595 px
+  resize set width 1200 px
+  resize set height 800 px
 }
 
 for_window [class="floating"] {
