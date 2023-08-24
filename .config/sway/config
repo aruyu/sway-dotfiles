@@ -131,7 +131,7 @@ for_window [title="Shutdown"] {
   floating enable
 }
 
-for_window [title="kime-candidate"] {
+for_window [title="Input Method Configuration"] {
   floating enable
   sticky enable
   border none
