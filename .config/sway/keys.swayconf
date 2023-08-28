@@ -14,6 +14,7 @@ set $right l
 set $term foot
 set $blowser firefox
 set $files nautilus --new-window
+set $update foot -e trizen -Syu ; killall waybar ; waybar &
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -32,9 +33,12 @@ bindsym $mod+q kill
 # Start your launcher
 bindsym Ctrl+space exec $menu
 
-# Start a internet blowser
+# Start the blowser and files
 bindsym $mod+e exec $blowser
 bindsym $mod+f exec $files
+
+# Update system
+bindsym $mod+u exec $update
 
 # Additional scripts
 bindsym $mod+Shift+3 exec ~/.config/sway/scripts/full_screenshot.sh
