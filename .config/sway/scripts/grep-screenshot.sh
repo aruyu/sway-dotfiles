@@ -1,6 +1,6 @@
 #!/bin/bash
 #==
-#   NOTE      - grep_screenshot.sh
+#   NOTE      - grep-screenshot.sh
 #   Author    - Aru
 #
 #   Created   - 2023.05.17

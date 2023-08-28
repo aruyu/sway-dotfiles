@@ -1,6 +1,6 @@
 #!/bin/bash
 #==
-#   NOTE      - full_screenshot.sh
+#   NOTE      - full-screenshot.sh
 #   Author    - Aru
 #
 #   Created   - 2023.05.17
