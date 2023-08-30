@@ -14,7 +14,7 @@ set $right l
 set $term foot
 set $blowser firefox
 set $files nautilus --new-window
-set $update foot -e trizen -Syu ; killall waybar ; waybar &
+set $update foot -e trizen -Syu && killall waybar && waybar &
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
