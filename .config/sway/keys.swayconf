@@ -19,7 +19,8 @@ set $update foot -e trizen -Syu && killall waybar && waybar &
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu killall wofi || wofi --show run -IG
+set $menu killall wofi || wofi --show
+set $menu2 killall wofi || wofi --show run -IG
 
 
 ### Key bindings
@@ -32,6 +33,7 @@ bindsym $mod+q kill
 
 # Start your launcher
 bindsym Ctrl+space exec $menu
+bindsym Shift+space exec $menu2
 
 # Start the blowser and files
 bindsym $mod+e exec $blowser
