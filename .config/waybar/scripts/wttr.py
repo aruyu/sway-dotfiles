@@ -56,15 +56,6 @@ WEATHER_CODES = {
 }
 
 
-try:
-  weather = requests.get("https://wttr.in/Seoul?format=j1").json()
-except:
-  try:
-    requested = requests.get("https://wttr.in/Seoul?format=j1").text
-    weather = json.loads(requested)
-  except:
-    weather = "No Info"
-
 
 def format_time(time):
   return time.replace("00", "").zfill(2)
@@ -92,7 +83,28 @@ def format_chances(hour):
       conditions.append(chances[event]+" "+hour[event]+"%")
   return ", ".join(conditions)
 
-try:
+def get_weather_info():
+  """ Function to Get Weather Info """
+
+  try:
+    weather = requests.get("https://wttr.in/Seoul?format=j1").json()
+  except:
+    try:
+      requested = requests.get("https://wttr.in/Seoul?format=j1").text
+      weather = json.loads(requested)
+    except:
+      weather = '{ "text": "🔗 \u00b0", "tooltip": "No weather info." }'
+      return -1, weather
+
+  return 0, weather
+
+
+
+##======================================================================##
+
+check, weather = get_weather_info()
+
+if check != -1:
   data = {}
   data['text'] = WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
     " " + weather['current_condition'][0]['temp_C']+ "°"
@@ -118,5 +130,5 @@ try:
 
   print(json.dumps(data))
 
-except:
-  print('{ "X": "X" }')
+else:
+  print(weather)
