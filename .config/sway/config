@@ -50,6 +50,59 @@ input "1118:2479:Microsoft_Surface_045E:09AF_Touchpad" {
   middle_emulation enabled
 }
 
+#input "1118:2479:Microsoft_Surface_045E:09AF_Mouse" {
+#  dwt enabled
+#  tap enabled
+#  click_method clickfinger
+#  scroll_method two_finger
+#  natural_scroll enabled
+#  middle_emulation enabled
+#}
+#
+#input "1118:2480:Microsoft_Surface_045E:09B0_Keyboard" {
+#  dwt enabled
+#  tap enabled
+#  natural_scroll enabled
+#  middle_emulation enabled
+#}
+#
+#input "1118:2478:Microsoft_Surface_045E:09AE_Keyboard" {
+#  dwt enabled
+#  tap enabled
+#  natural_scroll enabled
+#  middle_emulation enabled
+#}
+#
+#input "1118:2478:Microsoft_Surface_045E:09AE_Keyboard" {
+#  dwt enabled
+#  tap enabled
+#  natural_scroll enabled
+#  middle_emulation enabled
+#}
+#
+#{
+#  "identifier": "1118:2479:Microsoft_Surface_045E:09AF_Touchpad",
+#  "name": "Microsoft Surface 045E:09AF Touchpad",
+#  "vendor": 1118,
+#  "product": 2479,
+#  "type": "touchpad",
+#  "libinput": {
+#    "send_events": "enabled",
+#    "tap": "enabled",
+#    "tap_button_map": "lrm",
+#    "tap_drag": "enabled",
+#    "tap_drag_lock": "disabled",
+#    "accel_speed": 0,
+#    "accel_profile": "none",
+#    "natural_scroll": "enabled",
+#    "left_handed": "disabled",
+#    "click_method": "button_areas",
+#    "middle_emulation": "disabled",
+#    "scroll_method": "two_finger",
+#    "dwt": "disabled"
+#  }
+#},
+
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
