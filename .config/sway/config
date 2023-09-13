@@ -127,6 +127,10 @@ for_window [app_id="file-roller"] {
   floating enable
 }
 
+for_window [app_id="mpv"] {
+  floating enable
+}
+
 for_window [app_id="nwg-look"] {
   floating enable
 }
