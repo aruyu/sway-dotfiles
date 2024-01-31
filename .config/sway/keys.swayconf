@@ -1,7 +1,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Alt
+set $mod Mod1
 set $mod2 Mod4
 
 # Home row direction keys, like vim
@@ -54,10 +54,10 @@ bindsym $mod+Shift+4 exec ~/.config/sway/scripts/grep_screenshot.sh
 floating_modifier $mod normal
 
 # Reload the configuration file
-bindsym $mod+Shift+c exec killall waybar, reload
+bindsym $mod2+Return exec killall waybar, reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#bindsym $mod+Esc exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 
 #
@@ -133,7 +133,7 @@ bindsym $mod+d layout toggle split
 bindsym $mod+Return fullscreen
 
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+Shift+space floating toggle
+bindsym $mod2+Shift+Return floating toggle
 
 # Swap focus between the tiling area and the floating area
 #bindsym $mod+space focus mode_toggle
