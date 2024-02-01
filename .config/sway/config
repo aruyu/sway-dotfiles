@@ -163,6 +163,12 @@ for_window [app_id="gsimplecal"] {
   move right 595 px
 }
 
+for_window [app_id="avizo"] {
+  floating enable
+  sticky enable
+  border none
+}
+
 
 for_window [title="Home"] {
   floating enable
