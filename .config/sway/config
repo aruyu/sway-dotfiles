@@ -113,6 +113,15 @@ gaps outer 1
 gaps inner 5
 default_border pixel 3
 
+#gaps inner 28
+#gaps outer -8
+#default_border none
+#
+#border_images.focused ~/.config/sway/borders/focused.png
+#border_images.focused_inactive ~/.config/sway/borders/focused_inactive.png
+#border_images.unfocused ~/.config/sway/borders/unfocused.png
+#border_images.urgent ~/.config/sway/borders/urgent.png
+
 
 ### Window rules configuration
 #
