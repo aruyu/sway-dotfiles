@@ -19,7 +19,7 @@ from gi.repository import Gtk,GLib
 
 class RebootDialog(Gtk.Dialog):
   def __init__(self, parent):
-    super().__init__(title="Reboot", transient_for=parent, flags=0)
+    super().__init__(title="Reboot System", transient_for=parent, flags=0)
     self.add_button("Cancel", Gtk.ResponseType.CANCEL)
     self.add_button("   Reboot   ", Gtk.ResponseType.OK)
 

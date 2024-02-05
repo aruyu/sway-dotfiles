@@ -199,15 +199,15 @@ for_window [title="Save As"] {
   floating enable
 }
 
-for_window [title="Logout"] {
+for_window [title="Logout System"] {
   floating enable
 }
 
-for_window [title="Reboot"] {
+for_window [title="Reboot System"] {
   floating enable
 }
 
-for_window [title="Shutdown"] {
+for_window [title="Shutdown System"] {
   floating enable
 }
 
