@@ -29,7 +29,7 @@ set $menu2 killall wofi || wofi --show run -IG
 bindsym $mod+w exec $term
 
 # Kill focused window
-bindsym $mod2+Backspace kill
+bindsym $mod+escape kill
 
 # Start your launcher
 bindsym Ctrl+space exec $menu
