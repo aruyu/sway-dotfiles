@@ -50,6 +50,18 @@ input "1118:2479:Microsoft_Surface_045E:09AF_Touchpad" {
   middle_emulation enabled
 }
 
+input "1118:3127:IPTS_Touch" {
+  drag enable
+  drag_lock enable
+  map_to_output eDP-1
+}
+
+input "1118:3127:IPTS_Stylus" {
+  drag enable
+  drag_lock enable
+  map_to_output eDP-1
+}
+
 #input "1118:2479:Microsoft_Surface_045E:09AF_Mouse" {
 #  dwt enabled
 #  tap enabled
@@ -60,20 +72,6 @@ input "1118:2479:Microsoft_Surface_045E:09AF_Touchpad" {
 #}
 #
 #input "1118:2480:Microsoft_Surface_045E:09B0_Keyboard" {
-#  dwt enabled
-#  tap enabled
-#  natural_scroll enabled
-#  middle_emulation enabled
-#}
-#
-#input "1118:2478:Microsoft_Surface_045E:09AE_Keyboard" {
-#  dwt enabled
-#  tap enabled
-#  natural_scroll enabled
-#  middle_emulation enabled
-#}
-#
-#input "1118:2478:Microsoft_Surface_045E:09AE_Keyboard" {
 #  dwt enabled
 #  tap enabled
 #  natural_scroll enabled
