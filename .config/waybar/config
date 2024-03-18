@@ -49,7 +49,7 @@
   "custom/weather" : {
     "tooltip" : true,
     "format" : "{}",
-    "interval" : 600,
+    "interval" : 1800,
     "exec" : "~/.config/waybar/scripts/wttr.py",
     "return-type" : "json"
   },

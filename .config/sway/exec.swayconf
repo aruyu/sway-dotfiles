@@ -23,3 +23,4 @@ exec_always systemctl --user start sway-session.target
 # cursor theme
 seat seat0 xcursor_theme "Catppuccin-Frappe-Dark-Cursors"
 exec_always gsettings set org.gnome.desktop.interface cursor-theme Catppuccin-Frappe-Dark-Cursors
+exec_always gsettings set org.gnome.desktop.interface color-scheme prefer-dark

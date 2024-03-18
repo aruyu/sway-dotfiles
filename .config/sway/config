@@ -18,6 +18,9 @@ output * bg ~/Desktop/Backgrounds/wallpaper.jpg fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output eDP-1 position 1080,1440
+output DP-1 position 1080,0
+output DP-2 position 0,0 transform 270
 
 
 ### Idle configuration
@@ -107,10 +110,6 @@ input "1118:3127:IPTS_Stylus" {
 
 
 # set inner and outer gaps
-gaps outer 1
-gaps inner 5
-default_border pixel 3
-
 #gaps inner 28
 #gaps outer -8
 #default_border none
@@ -120,18 +119,32 @@ default_border pixel 3
 #border_images.unfocused ~/.config/sway/borders/unfocused.png
 #border_images.urgent ~/.config/sway/borders/urgent.png
 
+gaps outer 1
+gaps inner 5
+default_border pixel 3
+
 
 ### Window rules configuration
 #
 #for_window [class=".*"] split toggle
 #for_window [class=".*"] opacity 0.9
 
+for_window [app_id="firefox"] {
+  border pixel 3
+}
+
+for_window [app_id="chromium"] {
+  border pixel 3
+}
+
 for_window [app_id="org.gnome.Nautilus"] {
   floating enable
+  border pixel 3
 }
 
 for_window [app_id="file-roller"] {
   floating enable
+  border pixel 3
 }
 
 for_window [app_id="mpv"] {
@@ -160,6 +173,7 @@ for_window [app_id="copyq"] {
 
 for_window [app_id="remmina"] {
   floating enable
+  border pixel 3
 }
 
 for_window [app_id="gsimplecal"] {
@@ -177,13 +191,13 @@ for_window [app_id="avizo"] {
 }
 
 
-for_window [title="Home"] {
-  floating enable
-}
-
-for_window [title="Library"] {
-  floating enable
-}
+#for_window [title="Home"] {
+#  floating enable
+#}
+#
+#for_window [title="Library"] {
+#  floating enable
+#}
 
 for_window [title="Open File"] {
   floating enable
@@ -212,13 +226,17 @@ for_window [title="Shutdown System"] {
 for_window [title="Input Method Configuration"] {
   floating enable
   sticky enable
-  border none
+  border pixel 3
 }
 
 for_window [title="Uno Calculator"] {
   floating enable
   resize set width 600 px
   resize set height 500 px
+}
+
+for_window [title="UxPlay@"] {
+  floating enable
 }
 
 
@@ -231,7 +249,7 @@ for_window [class="Viewnior"] {
 for_window [class="floating"] {
   floating enable
   sticky enable
-  border none
+  border enable
 }
 
 
