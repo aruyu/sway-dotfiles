@@ -4,7 +4,7 @@
 
 ![Jul14_100102](https://github.com/aruyu/sway-dotfiles/assets/75081360/fdc14515-5b6d-4e23-bfd9-9f67e443acac)
 
-Custom dotfiles for Sway WM for wayland with ZSH.
+Custom dotfiles for Sway Compositor for wayland with ZSH.
 
 ## Installation
 
