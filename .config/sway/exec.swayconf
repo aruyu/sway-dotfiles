@@ -4,6 +4,7 @@
 exec avizo-service
 exec nm-applet --indicator
 exec blueman-applet
+exec pasystray
 exec copyq --start-server
 exec --no-startup-id fcitx
 exec swayidle -w timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'

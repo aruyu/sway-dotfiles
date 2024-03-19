@@ -21,7 +21,7 @@
     "temperature",
     "memory",
     "tray",
-    "pulseaudio",
+    //"pulseaudio",
     //"pulseaudio#microphone",
     "backlight",
     "battery",
