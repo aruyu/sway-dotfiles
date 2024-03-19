@@ -1,6 +1,8 @@
 # Sway Dotfiles
 
-![Mar19_151051](https://github.com/aruyu/sway-dotfiles/assets/75081360/fba16925-e399-4b3f-ab52-bd03e4bf0fbb)
+![Mar19_170212](https://github.com/aruyu/sway-dotfiles/assets/75081360/56448347-403a-403f-b0b3-7351b7e2fda2)
+
+![Mar19_150743](https://github.com/aruyu/sway-dotfiles/assets/75081360/e91ce484-5779-4bc0-b5d6-41596f500836)
 
 Custom dotfiles for SwayFx Compositor for wayland with ZSH.
 
