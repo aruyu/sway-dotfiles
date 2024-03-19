@@ -123,14 +123,34 @@ gaps outer 1
 gaps inner 5
 default_border pixel 3
 
+blur enable
+blur_passes 2
+blur_radius 10
+corner_radius 10
+
+shadows disable
+shadow_blur_radius 10
+#shadow_inactive_color #00000000
+
+default_dim_inactive 0.2
+dim_inactive_colors.unfocused #00000000
+dim_inactive_colors.urgent    #00000088
+titlebar_separator enable
+
 
 ### Window rules configuration
 #
 #for_window [class=".*"] split toggle
-#for_window [class=".*"] opacity 0.9
+for_window [class=".*"] opacity 0.9
+
+for_window [app_id="foot"] {
+  dim_inactive 0.15
+}
 
 for_window [app_id="firefox"] {
   border pixel 3
+  opacity 0.75
+  dim_inactive 0.25
 }
 
 for_window [app_id="chromium"] {

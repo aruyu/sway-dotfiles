@@ -11,7 +11,6 @@ exec swayidle -w timeout 3600 'systemctl suspend'
 
 # set window settings
 exec_always autotiling
-exec_always ~/.config/sway/scripts/window-transparency.sh
 
 # start sway xdg
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
