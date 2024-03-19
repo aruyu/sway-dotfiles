@@ -1,6 +1,6 @@
 #!/bin/bash
 #==
-#   NOTE      - load_layout.sh
+#   NOTE      - load-layout.sh
 #   Author    - Aru
 #
 #   Created   - 2024.03.19

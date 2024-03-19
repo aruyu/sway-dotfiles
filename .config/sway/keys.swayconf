@@ -43,12 +43,12 @@ bindsym $mod+f exec $files
 bindsym $mod+u exec $update
 
 # Additional scripts
-bindsym $mod+Shift+3 exec ~/.config/sway/scripts/full_screenshot.sh
-bindsym $mod+Shift+4 exec ~/.config/sway/scripts/grep_screenshot.sh
+bindsym $mod+Shift+3 exec ~/.config/sway/scripts/full-screenshot.sh
+bindsym $mod+Shift+4 exec ~/.config/sway/scripts/grep-screenshot.sh
 
-bindsym $mod+Ctrl+Shift+1 exec ~/.config/sway/scripts/load_layout.sh 1
-bindsym $mod+Ctrl+Shift+2 exec ~/.config/sway/scripts/load_layout.sh 2
-bindsym $mod+Ctrl+Shift+3 exec ~/.config/sway/scripts/load_layout.sh 3
+bindsym $mod+Ctrl+Shift+1 exec ~/.config/sway/scripts/load-layout.sh 1
+bindsym $mod+Ctrl+Shift+2 exec ~/.config/sway/scripts/load-layout.sh 2
+bindsym $mod+Ctrl+Shift+3 exec ~/.config/sway/scripts/load-layout.sh 3
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
