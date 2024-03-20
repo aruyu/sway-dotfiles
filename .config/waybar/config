@@ -140,9 +140,10 @@
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["", "", ""],
+    "on-click": "~/.config/waybar/scripts/ctrl-brightness.sh up",
+    "on-click-right": "~/.config/waybar/scripts/ctrl-brightness.sh down",
     "on-scroll-up": "lightctl up",
     "on-scroll-down": "lightctl down",
-    "on-click": "~/.config/waybar/scripts/ctrl-brightness.sh",
     "min-length": 5
   },
 
