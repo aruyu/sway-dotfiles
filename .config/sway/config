@@ -246,10 +246,9 @@ for_window [title="Shutdown System"] {
   floating enable
 }
 
-for_window [title="Input Method Configuration"] {
+for_window [app_id="org.fcitx.fcitx5-config-qt"] {
   floating enable
   sticky enable
-  border pixel 3
 }
 
 for_window [title="Uno Calculator"] {

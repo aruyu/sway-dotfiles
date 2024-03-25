@@ -52,6 +52,7 @@ tooltip {
 
 
 #custom-launcher,
+#custom-keyboard,
 #custom-updates,
 #custom-weather,
 #window,
@@ -81,6 +82,17 @@ tooltip {
   border-radius: 10px;
   border-right: 0px;
   margin-left: 6px;
+  margin-right: 4px;
+}
+
+#custom-keyboard {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+  background: rgba(21, 18, 27, .6);
+  color: #fff;
+  border: 1px rgba(21, 18, 27, .6);
+  border-radius: 10px;
+  border-left: 0px;
+  border-right: 0px;
   margin-right: 4px;
 }
 

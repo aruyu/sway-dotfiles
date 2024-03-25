@@ -11,6 +11,7 @@
   // Module order
   "modules-left": [
     "custom/launcher",
+    "custom/keyboard",
     "custom/updates",
     "custom/weather",
     "sway/workspaces",
@@ -33,6 +34,13 @@
   "custom/launcher": {
     "on-click": "nwggrid -o 0.75 -layer-shell-exclusive-zone 1",
     "format": "異",
+    "tooltip": false,
+    "min-length": 2
+  },
+
+  "custom/keyboard": {
+    "on-click": "killall wvkbd-mobintl || wvkbd-mobintl -L 320",
+    "format": "",
     "tooltip": false,
     "min-length": 2
   },
