@@ -55,11 +55,11 @@
   },
 
   "custom/weather" : {
-    "tooltip" : true,
     "format" : "{}",
     "interval" : 1800,
     "exec" : "~/.config/waybar/scripts/wttr.py",
-    "return-type" : "json"
+    "return-type" : "json",
+    "tooltip" : true,
   },
 
   "sway/workspaces": {
@@ -152,6 +152,7 @@
     "on-click-right": "~/.config/waybar/scripts/ctrl-brightness.sh down",
     "on-scroll-up": "lightctl up",
     "on-scroll-down": "lightctl down",
+    "tooltip": false,
     "min-length": 5
   },
 
