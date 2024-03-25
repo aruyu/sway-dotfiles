@@ -129,6 +129,7 @@ default_border pixel 3
 #for_window [class=".*"] split toggle
 #for_window [class=".*"] opacity 0.9
 
+
 for_window [app_id="firefox"] {
   border pixel 3
 }
@@ -190,36 +191,23 @@ for_window [app_id="avizo"] {
   border none
 }
 
-
-#for_window [title="Home"] {
-#  floating enable
-#}
-#
-#for_window [title="Library"] {
-#  floating enable
-#}
-
-for_window [title="Open File"] {
+for_window [app_id="firefox"] [title="Library"] {
   floating enable
 }
 
-for_window [title="Open Folder"] {
+for_window [app_id="firefox"] [title="File Upload"] {
   floating enable
 }
 
-for_window [title="Save As"] {
+for_window [app_id="logout.py"] {
   floating enable
 }
 
-for_window [title="Logout System"] {
+for_window [app_id="reboot.py"] {
   floating enable
 }
 
-for_window [title="Reboot System"] {
-  floating enable
-}
-
-for_window [title="Shutdown System"] {
+for_window [app_id="shutdown.py"] {
   floating enable
 }
 
@@ -229,16 +217,15 @@ for_window [title="Input Method Configuration"] {
   border pixel 3
 }
 
-for_window [title="Uno Calculator"] {
+for_window [app_id="Calculator.Skia.Gtk"] {
   floating enable
   resize set width 600 px
   resize set height 500 px
 }
 
-for_window [title="UxPlay@"] {
+for_window [class="GStreamer"] {
   floating enable
 }
-
 
 for_window [class="Viewnior"] {
   floating enable

@@ -71,7 +71,7 @@ case "$1" in
     swaymsg "exec foot -e htop"
     sleep 0.2s
 
-    swaymsg "resize shrink height 325px"
+    swaymsg "resize shrink height 450px"
     swaymsg "exec foot"
     sleep 0.2s
 
@@ -89,6 +89,9 @@ case "$1" in
 
     swaymsg "kill"
     swaymsg "resize grow width 325px"
+
+    swaymsg "focus left"
+    swaymsg "resize grow width 100px"
     ;;
 
   3 )
