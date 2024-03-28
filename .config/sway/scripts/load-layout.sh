@@ -19,25 +19,25 @@ case "$1" in
 
     swaymsg "layout tabbed"
     swaymsg "exec foot -e tty-clock -c -B"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "move down"
     sleep 0.2s
 
     swaymsg "splith"
     swaymsg "exec foot -e htop"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "resize shrink height 450px"
     swaymsg "exec foot"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "move right"
     sleep 0.2s
 
     swaymsg "splitv"
     swaymsg "exec foot"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "layout tabbed"
     swaymsg "focus up"
@@ -62,25 +62,25 @@ case "$1" in
 
     swaymsg "layout tabbed"
     swaymsg "exec foot -e tty-clock -c -B"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "move down"
     sleep 0.2s
 
     swaymsg "splith"
     swaymsg "exec foot -e htop"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "resize shrink height 450px"
     swaymsg "exec foot"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "move right"
     sleep 0.2s
 
     swaymsg "splitv"
     swaymsg "exec foot"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "layout tabbed"
     swaymsg "focus up"
@@ -102,14 +102,14 @@ case "$1" in
 
     swaymsg "layout tabbed"
     swaymsg "exec foot"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "move right"
     sleep 0.2s
 
     swaymsg "splitv"
     swaymsg "exec foot"
-    sleep 0.2s
+    sleep 0.4s
 
     swaymsg "layout tabbed"
     swaymsg "focus up"

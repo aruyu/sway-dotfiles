@@ -166,7 +166,7 @@ for_window [app_id="org.gnome.Nautilus"] {
   border pixel 3
 }
 
-for_window [app_id="file-roller"] {
+for_window [app_id="org.gnome.FileRoller"] {
   floating enable
   border pixel 3
 }
