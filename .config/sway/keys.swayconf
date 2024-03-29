@@ -50,6 +50,9 @@ bindsym $mod+Ctrl+Shift+1 exec ~/.config/sway/scripts/load-layout.sh 1
 bindsym $mod+Ctrl+Shift+2 exec ~/.config/sway/scripts/load-layout.sh 2
 bindsym $mod+Ctrl+Shift+3 exec ~/.config/sway/scripts/load-layout.sh 3
 
+# Test scripts
+#bindsym $mod+t exec ~/.config/sway/scripts/screen-lock.sh
+
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.
@@ -171,3 +174,6 @@ bindsym XF86MonBrightnessUp exec lightctl up
 bindsym XF86MonBrightnessDown exec lightctl down
 bindsym $mod+BracketRight exec lightctl up
 bindsym $mod+BracketLeft exec lightctl down
+
+# Power
+bindsym XF86PowerOff exec ~/.config/sway/scripts/screen-lock.sh

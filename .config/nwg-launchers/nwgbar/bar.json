@@ -1,8 +1,8 @@
 [
   {
-    "name": "Suspend",
-    "exec": "systemctl suspend",
-    "icon": "system-suspend"
+    "name": "Lock",
+    "exec": "/home/aru/.config/sway/scripts/screen-lock.sh",
+    "icon": "system-lock-screen"
   },
   {
     "name": "Logout",
