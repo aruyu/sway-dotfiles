@@ -61,3 +61,17 @@ Type one of belows.
 - Ubuntu
 - Mac
 - Font (*'JetBrainsMono NerdFont'* fonts installation)
+
+## Issues
+
+**NOTE:** If you have some problems with *'nwgbar'*, you have to change directory in *'exec'* key.
+
+> **~/.config/nwg-launchers/nwgbar/bar.json**.
+
+```json
+  {
+    "name": "...",
+    "exec": "$HOME/.config/...",
+    "icon": "..."
+  }
+```
