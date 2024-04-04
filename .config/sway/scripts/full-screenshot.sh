@@ -12,7 +12,7 @@
 
 function error_exit()
 {
-  notify-send --urgency critical "Scrot" "Canceled to capture Full ScreenShot." --icon="accessories-screenshot"
+  notify-send --urgency critical "Scrot" "$1" --icon="accessories-screenshot"
   exit 1
 }
 
@@ -24,5 +24,6 @@ if [[ ! -d "${SAVE_DIR}" ]]; then
   mkdir ${SAVE_DIR}
 fi
 
-grim ${SAVE_DIR}${TIME}.png || error_exit
+grim ${SAVE_DIR}${TIME}.png || error_exit "Canceled to capture Full ScreenShot."
+wl-copy < ${SAVE_DIR}${TIME}.png || error_exit "Copying to clipboard failed."
 notify-send --urgency low "Scrot" "Full ScreenShot successfully saved to\n${SAVE_DIR}${TIME}.png." --icon="accessories-screenshot"
