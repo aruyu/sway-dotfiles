@@ -109,10 +109,15 @@ source $ZSH/oh-my-zsh.sh
 # some more aliases
 alias l='ls -CF'
 alias la='ls -A'
-alias ll='ls -ahlF'
 alias lt='ls -ahlFt'
+alias ll='ls -ahlF'
+alias llh='ls -alF'
+alias lf='du -ahlc --max-depth=1'
+alias lfh='du -alc --max-depth=1'
+
 alias vi='nvim'
 alias lg='lazygit'
 
-# startswith Neofetch
+# starts rc
+source ~/.profile
 neofetch
