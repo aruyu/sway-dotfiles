@@ -117,6 +117,7 @@ alias lfh='du -alc --max-depth=1'
 
 alias vi='nvim'
 alias lg='lazygit'
+alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 
 # starts rc
 source ~/.profile
