@@ -9,8 +9,8 @@ export TERM=xterm-256color
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="headline"
-source $HOME/.config/zsh/headline.zsh-theme
+ZSH_THEME="simple"
+#source $HOME/.config/zsh/headline.zsh-theme
 #source $HOME/.config/zsh/ziraga.zsh-theme
 
 # Set list of themes to pick from when loading at random
@@ -120,5 +120,6 @@ alias lg='lazygit'
 alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 
 # starts rc
-source ~/.profile
+#source ~/.profile
+xhost + > /dev/null
 neofetch
