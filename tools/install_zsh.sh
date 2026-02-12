@@ -80,6 +80,7 @@ if [ $CURRENT_JOB = $ARCH ]; then
 EOF
 
   zsh
+  fastfetch --config $HOME/.config/fastfetch/config.jsonc
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
@@ -95,6 +96,7 @@ elif [ $CURRENT_JOB = $UBUNTU ]; then
 EOF
 
   zsh
+  fastfetch --config $HOME/.config/fastfetch/config.jsonc
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
@@ -109,6 +111,7 @@ elif [ $CURRENT_JOB = $MAC ]; then
 EOF
 
   zsh
+  fastfetch --config $HOME/.config/fastfetch/config.jsonc
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 

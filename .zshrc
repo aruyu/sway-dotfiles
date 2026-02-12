@@ -122,4 +122,4 @@ alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 # starts rc
 #source ~/.profile
 xhost + > /dev/null
-neofetch
+fastfetch
