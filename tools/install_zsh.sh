@@ -69,7 +69,7 @@ done
 
 
 if [ $CURRENT_JOB = $ARCH ]; then
-  script_print_notify "Selected OS: $CURRENT_JOB"
+  script_print_notify "Selected OS: $CURRENT_JOB\n"
 
   sudo pacman -S --needed --noconfirm zsh
   chsh -s /bin/zsh
@@ -85,7 +85,7 @@ EOF
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
-  script_print_notify "Selected OS: $CURRENT_JOB"
+  script_print_notify "Selected OS: $CURRENT_JOB\n"
 
   sudo apt-get -y install zsh
   chsh -s /bin/zsh
@@ -101,7 +101,7 @@ EOF
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $MAC ]; then
-  script_print_notify "Selected OS: $CURRENT_JOB"
+  script_print_notify "Selected OS: $CURRENT_JOB\n"
 
   chsh -s /bin/zsh
   env | grep ^SHELL=
