@@ -8,6 +8,7 @@ Custom dotfiles for SwayFx Compositor for wayland with ZSH.
 
 ## Installation
 
+> [!TIP]
 > I highly recommend to use ***'rsync'*** for installation.
 
 <details>
@@ -64,11 +65,11 @@ Type one of belows.
 
 ## Issues
 
-**NOTE:** If you have some problems with *'nwgbar'*, you have to change directory in *'exec'* key.
+> [!NOTE]
+> If you have some problems with *'nwgbar'*, you have to change directory in *'exec'* key.
+>> **~/.config/nwg-launchers/nwgbar/bar.json**.
 
-> **~/.config/nwg-launchers/nwgbar/bar.json**.
-
-```json
+```json:bar.json
   {
     "name": "...",
     "exec": "$HOME/.config/...",
