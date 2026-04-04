@@ -20,13 +20,13 @@ Custom dotfiles for SwayFx Compositor for wayland with ZSH.
 git clone https://github.com/aruyu/sway-dotfiles.git ~/Documents/sway-dotfiles/
 ```
 
-> Use rsync to sync the dotfiles.
+#### Use rsync to sync the dotfiles.
 
 ```bash
 rsync -avxHAXP --exclude={'.git*','tools','LICENSE','*.md'} ~/Documents/sway-dotfiles/. ~/
 ```
 
-> Run *'install.sh'* to install essentials.
+#### Run *'install.sh'* to install essentials.
 
 ``` bash
 bash ~/Documents/sway-dotfiles/tools/install_themes.sh
@@ -45,7 +45,7 @@ git clone https://github.com/aruyu/sway-dotfiles.git ~/Downloads/sway-dotfiles/
 cp -rf ~/Downloads/sway-dotfiles/.* ~/
 ```
 
-> Run *'install.sh'* to install essentials.
+#### Run *'install.sh'* to install essentials.
 
 ```bash
 bash ~/Downloads/sway-dotfiles/tools/install_themes.sh
