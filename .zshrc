@@ -121,5 +121,5 @@ alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 
 # starts rc
 #source ~/.profile
-xhost + > /dev/null
+#xhost +localhost 2> /dev/null
 fastfetch
