@@ -80,8 +80,11 @@ if [ $CURRENT_JOB = $ARCH ]; then
 EOF
 
   zsh
-  fastfetch --config $HOME/.config/fastfetch/config.jsonc
+  git clone https://github.com/Aloxaf/fzf-tab $HOME/.oh-my-zsh/custom/plugins/fzf-tab
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+  fastfetch --config $HOME/.config/fastfetch/config.jsonc
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
@@ -96,8 +99,11 @@ elif [ $CURRENT_JOB = $UBUNTU ]; then
 EOF
 
   zsh
-  fastfetch --config $HOME/.config/fastfetch/config.jsonc
+  git clone https://github.com/Aloxaf/fzf-tab $HOME/.oh-my-zsh/custom/plugins/fzf-tab
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+  fastfetch --config $HOME/.config/fastfetch/config.jsonc
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $MAC ]; then
@@ -111,8 +117,11 @@ elif [ $CURRENT_JOB = $MAC ]; then
 EOF
 
   zsh
-  fastfetch --config $HOME/.config/fastfetch/config.jsonc
+  git clone https://github.com/Aloxaf/fzf-tab $HOME/.oh-my-zsh/custom/plugins/fzf-tab
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+  fastfetch --config $HOME/.config/fastfetch/config.jsonc
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $FONT ]; then
@@ -123,7 +132,7 @@ elif [ $CURRENT_JOB = $FONT ]; then
   unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/ || error_exit "Installation Faild... unzip needed."
   rm JetBrainsMono.zip
 
-  script_print_notify "Make sure you set fonts for your terminal properly.\n"
+  script_print_notify "Make sure you set the fonts properly.\n"
 fi
 
 
