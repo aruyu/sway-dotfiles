@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export TERM=xterm-256color
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND="fd --type f"
 #zstyle ':fzf-tab:*' fzf-bindings-default 'tab:down,btab:up,change:top,ctrl-space:toggle,bspace:backward-delete-char,ctrl-h:backward-delete-char'
 
 # You may need to manually set your language environment
@@ -111,7 +111,7 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# some more aliases
+# User aliases
 alias l='ls -CF'
 alias la='ls -A'
 alias lt='ls -ahlFt'
@@ -124,7 +124,29 @@ alias vi='nvim'
 alias lg='lazygit'
 alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 
-# pyenv
+# IDE aliases
+# alias vivado23_1="/opt/Xilinx/Vivado/2023.1/bin/vivado"
+# alias vivado24_1="/opt/Xilinx/Vivado/2024.1/bin/vivado"
+# alias vivado24_2="/opt/Xilinx/Vivado/2024.2/bin/vivado"
+#
+# alias vitis23_1="/opt/Xilinx/Vitis/2023.1/bin/vivado"
+# alias vitis24_1="/opt/Xilinx/Vitis/2024.1/bin/vivado"
+# alias vitis24_2="/opt/Xilinx/Vitis/2024.2/bin/vivado"
+#
+# alias petalinux23_1="source /opt/petalinux/v2023.1/settings.sh ; zsh"
+# alias petalinux24_1="source /opt/petalinux/v2024.1/settings.sh ; zsh"
+# alias petalinux24_2="source /opt/petalinux/v2024.2/settings.sh ; zsh"
+
+# vivado & petalinux configs
+# echo
+# echo "##### =========*-------========= #####"
+# echo "##### PETALINUX 2024.1 WORKSPACE #####"
+# echo "##### =========-------*========= #####"
+# echo
+# source /opt/Xilinx/Vivado/2024.1/settings64.sh
+# source /opt/petalinux/v2024.1/settings.sh
+
+# pyenv configs
 # export PYENV_ROOT="$HOME/.pyenv"
 # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init - zsh)"
