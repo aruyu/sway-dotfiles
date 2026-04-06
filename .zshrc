@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND="fd --type f"
-#zstyle ':fzf-tab:*' fzf-bindings-default 'tab:down,btab:up,change:top,ctrl-space:toggle,bspace:backward-delete-char,ctrl-h:backward-delete-char'
+# zstyle ':fzf-tab:*' fzf-bindings-default 'tab:down,btab:up,change:top,ctrl-space:toggle,bspace:backward-delete-char,ctrl-h:backward-delete-char'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -139,12 +139,13 @@ alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 
 # vivado & petalinux configs
 # echo
-# echo "##### =========*-------========= #####"
-# echo "##### PETALINUX 2024.1 WORKSPACE #####"
-# echo "##### =========-------*========= #####"
-# echo
-# source /opt/Xilinx/Vivado/2024.1/settings64.sh
+# echo "------------------------------------------"
+# echo "=====  PETALINUX  2024.1  WORKSPACE  ====="
+# echo "----------------+========+----------------"
 # source /opt/petalinux/v2024.1/settings.sh
+# source /tools/Xilinx/Vivado/2024.1/settings64.sh
+# echo "------------------------------------------"
+# echo
 
 # pyenv configs
 # export PYENV_ROOT="$HOME/.pyenv"
