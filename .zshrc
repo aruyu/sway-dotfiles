@@ -87,7 +87,11 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND="fd --type f"
-# zstyle ':fzf-tab:*' fzf-bindings-default 'tab:down,btab:up,change:top,ctrl-space:toggle,bspace:backward-delete-char,ctrl-h:backward-delete-char'
+export FZF_DEFAULT_OPTS="--bind tab:up,btab:down,ctrl-space:toggle"
+zstyle ':fzf-tab:*' fzf-flags \
+  --exact \
+  --bind='tab:transform:((FZF_MATCH_COUNT == 1)) && echo accept || echo down' \
+#  --bind='bspace:backward-delete-char,ctrl-h:backward-delete-char'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -155,5 +159,5 @@ alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 
 # starts rc
 # source ~/.profile
-# xhost +localhost 2> /dev/null
+# xhost +localhost 1> /dev/null
 # fastfetch
