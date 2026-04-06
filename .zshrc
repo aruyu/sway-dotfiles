@@ -3,8 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export TERM=xterm-256color
-export FZF_DEFAULT_COMMAND='fd --type f'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -87,6 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export TERM=xterm-256color
+export FZF_DEFAULT_COMMAND='fd --type f'
+#zstyle ':fzf-tab:*' fzf-bindings-default 'tab:down,btab:up,change:top,ctrl-space:toggle,bspace:backward-delete-char,ctrl-h:backward-delete-char'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -123,7 +124,13 @@ alias vi='nvim'
 alias lg='lazygit'
 alias bfg='java -jar ~/.cache/usr/bfg-1.15.0.jar'
 
+# pyenv
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init - zsh)"
+# eval "$(pyenv init --path)"
+
 # starts rc
-#source ~/.profile
-#xhost +localhost 2> /dev/null
-fastfetch
+# source ~/.profile
+# xhost +localhost 2> /dev/null
+# fastfetch
