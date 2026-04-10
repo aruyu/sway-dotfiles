@@ -71,6 +71,18 @@ done
 if [ $CURRENT_JOB = $ARCH ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
 
+  while true; do
+    read -p "Do you want to install 'fd' & 'fzf' pkgs? (y/n): " yn
+    case $yn in
+      [Yy]| [Yy][Ee][Ss] )
+        sudo pacman -S --needed --noconfirm fd
+        sudo pacman -S --needed --noconfirm fzf
+        break;;
+      [Nn]| [Nn][Oo] )  break;;
+      * )               echo "Wrong answer.";;
+    esac
+  done
+
   sudo pacman -S --needed --noconfirm zsh
   chsh -s /bin/zsh
   env | grep ^SHELL=
@@ -89,6 +101,23 @@ EOF
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
+
+  while true; do
+    read -p "Do you want to install 'fd' & 'fzf' pkgs? (y/n): " yn
+    case $yn in
+      [Yy]| [Yy][Ee][Ss] )
+        sudo apt-get -y install fd-find
+        sudo ln -s /usr/bin/fdfind /usr/bin/fd
+
+        curl -LO "https://github.com/junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_amd64.tar.gz"
+        tar xzf fzf-*.tar.gz
+        sudo mv fzf /usr/local/bin/fzf
+        rm fzf-*.tar.gz
+        break;;
+      [Nn]| [Nn][Oo] )  break;;
+      * )               echo "Wrong answer.";;
+    esac
+  done
 
   sudo apt-get -y install zsh
   chsh -s /bin/zsh
