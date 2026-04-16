@@ -157,9 +157,9 @@ elif [ $CURRENT_JOB = $FONT ]; then
   echo -ne "Selected Job: $CURRENT_JOB\n"
 
   mkdir -p $HOME/.local/share/fonts/
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip || error_exit "Installation Faild... wget needed."
-  unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/ || error_exit "Installation Faild... unzip needed."
-  rm JetBrainsMono.zip
+  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz || error_exit "Installation Faild... curl needed."
+  tar xfJ JetBrainsMono.tar.xz -C $HOME/.local/share/fonts/ || error_exit "Installation Faild... tar needed."
+  rm JetBrainsMono.tar.xz
 
   script_print_notify "Make sure you set the fonts properly.\n"
 fi
