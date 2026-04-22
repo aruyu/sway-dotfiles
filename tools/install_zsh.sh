@@ -63,6 +63,8 @@ while true; do
     [Uu][Bb][Uu][Nn][Tt][Uu] )  CURRENT_JOB=Ubuntu; break;;
     [Mm][Aa][Cc] )              CURRENT_JOB=Mac; break;;
     [Ff][Oo][Nn][Tt] )          CURRENT_JOB=Font; break;;
+  esac
+done
 
 while true; do
   read -p "Do you want to install extension pkgs [fd,fzf,lsd,bat]? (Y/n): " SELECTION
