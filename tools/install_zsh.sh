@@ -63,6 +63,12 @@ while true; do
     [Uu][Bb][Uu][Nn][Tt][Uu] )  CURRENT_JOB=Ubuntu; break;;
     [Mm][Aa][Cc] )              CURRENT_JOB=Mac; break;;
     [Ff][Oo][Nn][Tt] )          CURRENT_JOB=Font; break;;
+
+while true; do
+  read -p "Do you want to install extension pkgs [fd,fzf,lsd,bat]? (Y/n): " SELECTION
+  case ${SELECTION} in
+    [Yy] | [Yy][Ee][Ss] )       EXTENSIONS=YES; break;;
+    [Nn] | [Nn][Oo] )           EXTENSIONS=NO;  break;;
     * )                         echo "Wrong answer.";;
   esac
 done
@@ -71,17 +77,12 @@ done
 if [ $CURRENT_JOB = $ARCH ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
 
-  while true; do
-    read -p "Do you want to install 'fd' & 'fzf' pkgs? (y/n): " yn
-    case $yn in
-      [Yy]| [Yy][Ee][Ss] )
-        sudo pacman -S --needed --noconfirm fd
-        sudo pacman -S --needed --noconfirm fzf
-        break;;
-      [Nn]| [Nn][Oo] )  break;;
-      * )               echo "Wrong answer.";;
-    esac
-  done
+  if [[ ${EXTENSIONS} == "YES" ]]; then
+    sudo pacman -S --needed --noconfirm fd
+    sudo pacman -S --needed --noconfirm fzf
+    sudo pacman -S --needed --noconfirm lsd
+    sudo pacman -S --needed --noconfirm bat
+  fi
 
   sudo pacman -S --needed --noconfirm zsh
   chsh -s /bin/zsh
@@ -102,22 +103,17 @@ EOF
 elif [ $CURRENT_JOB = $UBUNTU ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
 
-  while true; do
-    read -p "Do you want to install 'fd' & 'fzf' pkgs? (y/n): " yn
-    case $yn in
-      [Yy]| [Yy][Ee][Ss] )
-        sudo apt-get -y install fd-find
-        sudo ln -s /usr/bin/fdfind /usr/bin/fd
+  if [[ ${EXTENSIONS} == "YES" ]]; then
+    sudo apt-get -y install fd-find
+    sudo ln -s /usr/bin/fdfind /usr/local/bin/fd
+    sudo apt-get -y install lsd bat
+    sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
-        curl -LO "https://github.com/junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_amd64.tar.gz"
-        tar xzf fzf-*.tar.gz
-        sudo mv fzf /usr/local/bin/fzf
-        rm fzf-*.tar.gz
-        break;;
-      [Nn]| [Nn][Oo] )  break;;
-      * )               echo "Wrong answer.";;
-    esac
-  done
+    curl -LO "https://github.com/junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_amd64.tar.gz"
+    tar xzf fzf-*.tar.gz
+    sudo mv fzf /usr/local/bin/fzf
+    rm fzf-*.tar.gz
+  fi
 
   sudo apt-get -y install zsh
   chsh -s /bin/zsh
@@ -137,6 +133,13 @@ EOF
 
 elif [ $CURRENT_JOB = $MAC ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
+
+  if [[ ${EXTENSIONS} == "YES" ]]; then
+    brew install fd
+    brew install fzf
+    brew install lsd
+    brew install bat
+  fi
 
   chsh -s /bin/zsh
   env | grep ^SHELL=
