@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export TERM=xterm-256color
-export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_DEFAULT_COMMAND="fd --type=f"
 export FZF_DEFAULT_OPTS="--bind tab:up,btab:down,ctrl-space:toggle"
 zstyle ':fzf-tab:*' fzf-flags \
   --exact \
@@ -116,13 +116,18 @@ zstyle ':fzf-tab:*' fzf-flags \
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # User aliases
-alias l='ls -CF'
+alias ls='lsd'
+alias cat='bat --paging=never'
+
+alias l='ls -F'
 alias la='ls -A'
 alias lt='ls -ahlFt'
-alias ll='ls -ahlF'
+alias ll='ls -ahlF' # ls -lahF
 alias llh='ls -alF'
-alias lf='du -ahlc --max-depth=1'
+alias lf='du -ahlc --max-depth=1' # du -lahd 1
 alias lfh='du -alc --max-depth=1'
+#alias ff='find ./ -name'
+alias ff='fd -tb -tc -tf -tl -tp -ts -gHL' # fd -tf -gHL
 
 alias vi='nvim'
 alias lg='lazygit'
