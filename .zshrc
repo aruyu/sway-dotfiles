@@ -116,7 +116,11 @@ zstyle ':fzf-tab:*' fzf-flags \
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # User aliases
-alias ls='lsd'
+if [[ -n "$SSH_CONNECTION" ]]; then
+  alias ls='lsd --icon=never'
+else
+  alias ls='lsd'
+fi
 alias cat='bat --paging=never'
 
 alias l='ls -F'
