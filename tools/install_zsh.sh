@@ -111,14 +111,19 @@ elif [ $CURRENT_JOB = $UBUNTU ]; then
   if [[ ${EXTENSIONS} == "YES" ]]; then
     sudo apt-get -y install fd-find
     sudo ln -s /usr/bin/fdfind /usr/local/bin/fd
-    sudo snap install lsd
     sudo apt-get -y install bat
     sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
-    curl -LO "https://github.com/junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_amd64.tar.gz"
-    tar xzf fzf-*.tar.gz
-    sudo mv fzf /usr/local/bin/fzf
+    version=$(curl -s https://api.github.com/repos/junegunn/fzf/releases/latest | jq -r ".tag_name")
+    curl -LO "https://github.com/junegunn/fzf/releases/latest/download/fzf-${version:1}-linux_amd64.tar.gz"
+    tar xfz fzf-*.tar.gz
+    sudo chown root:root fzf ; sudo mv fzf /usr/local/bin/fzf
     rm fzf-*.tar.gz
+
+    version=$(curl -s https://api.github.com/repos/lsd-rs/lsd/releases/latest | jq -r ".tag_name")
+    curl -LO "https://github.com/lsd-rs/lsd/releases/latest/download/lsd_${version:1}_amd64.deb"
+    sudo apt-get install ./lsd_${version:1}_amd64.deb
+    rm lsd_${version:1}_amd64.deb
   fi
 
   sudo apt-get -y install zsh
