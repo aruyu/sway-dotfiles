@@ -58,11 +58,12 @@ FONT=Font
 
 while true; do
   read -p "Enter what you want to install (Arch, Ubuntu, Mac, Font): " SELECTION
-  case $SELECTION in
-    [Aa][Rr][Cc][Hh] )          CURRENT_JOB=Arch; break;;
-    [Uu][Bb][Uu][Nn][Tt][Uu] )  CURRENT_JOB=Ubuntu; break;;
-    [Mm][Aa][Cc] )              CURRENT_JOB=Mac; break;;
-    [Ff][Oo][Nn][Tt] )          CURRENT_JOB=Font; break;;
+  case ${SELECTION} in
+    [Aa][Rr][Cc][Hh] )          CURRENT_JOB=${ARCH};   break;;
+    [Uu][Bb][Uu][Nn][Tt][Uu] )  CURRENT_JOB=${UBUNTU}; break;;
+    [Mm][Aa][Cc] )              CURRENT_JOB=${MAC};    break;;
+    [Ff][Oo][Nn][Tt] )          CURRENT_JOB=${FONT};   break;;
+    * )                         echo "Wrong answer.";;
   esac
 done
 
