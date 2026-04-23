@@ -79,6 +79,7 @@ done
 
 if [ $CURRENT_JOB = $ARCH ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
+  sudo pacman -Syy
 
   if [[ ${EXTENSIONS} == "YES" ]]; then
     sudo pacman -S --needed --noconfirm fd
@@ -105,11 +106,13 @@ EOF
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
+  sudo apt-get -y update
 
   if [[ ${EXTENSIONS} == "YES" ]]; then
     sudo apt-get -y install fd-find
     sudo ln -s /usr/bin/fdfind /usr/local/bin/fd
-    sudo apt-get -y install lsd bat
+    sudo snap install lsd
+    sudo apt-get -y install bat
     sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
     curl -LO "https://github.com/junegunn/fzf/releases/download/v0.71.0/fzf-0.71.0-linux_amd64.tar.gz"
@@ -136,6 +139,7 @@ EOF
 
 elif [ $CURRENT_JOB = $MAC ]; then
   script_print_notify "Selected OS: $CURRENT_JOB\n"
+  brew update
 
   if [[ ${EXTENSIONS} == "YES" ]]; then
     brew install fd
