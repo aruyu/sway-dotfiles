@@ -67,14 +67,16 @@ while true; do
   esac
 done
 
-while true; do
-  read -p "Do you want to install extension pkgs [fd,fzf,lsd,bat]? (Y/n): " SELECTION
-  case ${SELECTION} in
-    [Yy] | [Yy][Ee][Ss] )       EXTENSIONS=YES; break;;
-    [Nn] | [Nn][Oo] )           EXTENSIONS=NO;  break;;
-    * )                         echo "Wrong answer.";;
-  esac
-done
+if [[ ${CURRENT_JOB} != ${FONT} ]]; then
+  while true; do
+    read -p "Do you want to install extension pkgs [fd,fzf,lsd,bat]? (Y/n): " SELECTION
+    case ${SELECTION} in
+      [Yy] | [Yy][Ee][Ss] )     EXTENSIONS=YES; break;;
+      [Nn] | [Nn][Oo] )         EXTENSIONS=NO;  break;;
+      * )                       echo "Wrong answer.";;
+    esac
+  done
+fi
 
 
 if [ $CURRENT_JOB = $ARCH ]; then
