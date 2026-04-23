@@ -116,16 +116,16 @@ elif [ $CURRENT_JOB = $UBUNTU ]; then
     sudo apt-get -y install bat
     sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
-    version=$(curl -s https://api.github.com/repos/junegunn/fzf/releases/latest | jq -r ".tag_name")
-    curl -LO "https://github.com/junegunn/fzf/releases/latest/download/fzf-${version:1}-linux_amd64.tar.gz"
-    tar xfz fzf-*.tar.gz
+    version=$(curl -s https://api.github.com/repos/junegunn/fzf/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
+    curl -Lo fzf.tar.gz "https://github.com/junegunn/fzf/releases/latest/download/fzf-${version}-linux_amd64.tar.gz"
+    tar xfz fzf.tar.gz
     sudo chown root:root fzf ; sudo mv fzf /usr/local/bin/fzf
-    rm fzf-*.tar.gz
+    rm fzf.tar.gz
 
-    version=$(curl -s https://api.github.com/repos/lsd-rs/lsd/releases/latest | jq -r ".tag_name")
-    curl -LO "https://github.com/lsd-rs/lsd/releases/latest/download/lsd_${version:1}_amd64.deb"
-    sudo apt-get install ./lsd_${version:1}_amd64.deb
-    rm lsd_${version:1}_amd64.deb
+    version=$(curl -s https://api.github.com/repos/lsd-rs/lsd/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
+    curl -Lo lsd.deb "https://github.com/lsd-rs/lsd/releases/latest/download/lsd_${version}_amd64.deb"
+    sudo apt-get install ./lsd.deb
+    rm lsd.deb
   fi
 
   sudo apt-get -y install zsh
