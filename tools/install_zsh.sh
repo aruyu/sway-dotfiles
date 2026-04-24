@@ -107,14 +107,14 @@ EOF
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
-  script_print_notify "Selected OS: $CURRENT_JOB\n"
+  script_print_notify "Selected OS: $CURRENT_JOB (22.04 LTS)\n"
   sudo apt-get -y update
 
   if [[ ${EXTENSIONS} == "YES" ]]; then
-    sudo apt-get -y install fd-find
-    sudo ln -s /usr/bin/fdfind /usr/local/bin/fd
-    sudo apt-get -y install bat
-    sudo ln -s /usr/bin/batcat /usr/local/bin/bat
+    version=$(curl -s https://api.github.com/repos/sharkdp/fd/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
+    curl -Lo fd.deb "https://github.com/sharkdp/fd/releases/latest/download/fd_${version}_amd64.deb"
+    sudo apt-get -y install ./fd.deb
+    rm fd.deb
 
     version=$(curl -s https://api.github.com/repos/junegunn/fzf/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
     curl -Lo fzf.tar.gz "https://github.com/junegunn/fzf/releases/latest/download/fzf-${version}-linux_amd64.tar.gz"
@@ -124,8 +124,11 @@ elif [ $CURRENT_JOB = $UBUNTU ]; then
 
     version=$(curl -s https://api.github.com/repos/lsd-rs/lsd/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
     curl -Lo lsd.deb "https://github.com/lsd-rs/lsd/releases/latest/download/lsd_${version}_amd64.deb"
-    sudo apt-get install ./lsd.deb
+    sudo apt-get -y install ./lsd.deb
     rm lsd.deb
+
+    sudo apt-get -y install bat
+    sudo ln -s /usr/bin/batcat /usr/local/bin/bat
   fi
 
   sudo apt-get -y install zsh
