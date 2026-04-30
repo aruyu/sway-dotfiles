@@ -79,8 +79,8 @@ if [[ ${CURRENT_JOB} != ${FONT} ]]; then
 fi
 
 
-if [ $CURRENT_JOB = $ARCH ]; then
-  script_print_notify "Selected OS: $CURRENT_JOB\n"
+if [[ ${CURRENT_JOB} == ${ARCH} ]]; then
+  script_print_notify "Selected OS: ${CURRENT_JOB}\n"
   sudo pacman -Syy
 
   if [[ ${EXTENSIONS} == "YES" ]]; then
@@ -106,8 +106,8 @@ EOF
   fastfetch --config $HOME/.config/fastfetch/config.jsonc
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
-elif [ $CURRENT_JOB = $UBUNTU ]; then
-  script_print_notify "Selected OS: $CURRENT_JOB (22.04 LTS)\n"
+elif [[ ${CURRENT_JOB} == ${UBUNTU} ]]; then
+  script_print_notify "Selected OS: ${CURRENT_JOB} (22.04 LTS)\n"
   sudo apt-get -y update
 
   if [[ ${EXTENSIONS} == "YES" ]]; then
@@ -147,8 +147,8 @@ EOF
   fastfetch --config $HOME/.config/fastfetch/config.jsonc
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
-elif [ $CURRENT_JOB = $MAC ]; then
-  script_print_notify "Selected OS: $CURRENT_JOB\n"
+elif [[ ${CURRENT_JOB} == ${MAC} ]]; then
+  script_print_notify "Selected OS: ${CURRENT_JOB}\n"
   brew update
 
   if [[ ${EXTENSIONS} == "YES" ]]; then
@@ -173,8 +173,8 @@ EOF
   fastfetch --config $HOME/.config/fastfetch/config.jsonc
   curl -o $HOME/.zshrc https://raw.githubusercontent.com/aruyu/sway-dotfiles/master/.zshrc
 
-elif [ $CURRENT_JOB = $FONT ]; then
-  echo -ne "Selected Job: $CURRENT_JOB\n"
+elif [[ ${CURRENT_JOB} == ${FONT} ]]; then
+  echo -ne "Selected Job: ${CURRENT_JOB}\n"
 
   mkdir -p $HOME/.local/share/fonts/
   curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz || error_exit "Installation Faild... curl needed."
@@ -185,4 +185,4 @@ elif [ $CURRENT_JOB = $FONT ]; then
 fi
 
 
-script_print_notify "$CURRENT_JOB installation successfully done.\n"
+script_print_notify "${CURRENT_JOB} installation successfully done.\n"
